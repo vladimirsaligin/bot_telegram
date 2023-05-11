@@ -14,7 +14,7 @@ def echo(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=update.message.text)
 
 # Создаем экземпляр обновления и регистрируем обработчики
-updater = Updater(use_context=True)
+updater = Updater(token='5987197501:AAHvadKeHvZqX_gOq3H_v-9p0vV_rra-lsQ')
 dispatcher = updater.dispatcher
 dispatcher.add_handler(CommandHandler('start', start))
 dispatcher.add_handler(MessageHandler(filters.text & ~filters.command, echo))
